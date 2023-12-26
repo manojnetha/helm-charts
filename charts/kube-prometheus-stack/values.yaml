@@ -290,11 +290,11 @@ alertmanager:
     global:
       resolve_timeout: 5m
       smtp_from: 'manojnethapanchala5@gmail.com'
-			smtp_smarthost: 'email-smtp.us-west-2.amazonaws.com:587'
-			smtp_auth_username: 'AKIASLYFRI4EIZ6HDPOU'
-			smtp_auth_password: 'BNxUkTnCmuIhjojHEvIoZ3SFt+L/VSJYAo9zx4b87JKi'
-			smtp_auth_secret: null
-			smtp_auth_identity:
+      smtp_smarthost: 'email-smtp.us-west-2.amazonaws.com:587'
+      smtp_auth_username: 'AKIASLYFRI4EIZ6HDPOU'
+      smtp_auth_password: 'BNxUkTnCmuIhjojHEvIoZ3SFt+L/VSJYAo9zx4b87JKi'
+      smtp_auth_secret: null
+      smtp_auth_identity:
       smtp_require_tls: true
     inhibit_rules:
       - source_matchers:
