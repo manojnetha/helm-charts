@@ -289,6 +289,13 @@ alertmanager:
   config:
     global:
       resolve_timeout: 5m
+      smtp_from: 'manojnethapanchala5@gmail.com'
+			smtp_smarthost: 'email-smtp.us-west-2.amazonaws.com:587'
+			smtp_auth_username: 'AKIASLYFRI4EIZ6HDPOU'
+			smtp_auth_password: 'BNxUkTnCmuIhjojHEvIoZ3SFt+L/VSJYAo9zx4b87JKi'
+			smtp_auth_secret: null
+			smtp_auth_identity:
+      smtp_require_tls: true
     inhibit_rules:
       - source_matchers:
           - 'severity = critical'
@@ -315,13 +322,15 @@ alertmanager:
       group_wait: 30s
       group_interval: 5m
       repeat_interval: 12h
-      receiver: 'null'
+      receiver: 'manoj'
       routes:
-      - receiver: 'null'
+      - receiver: 'manoj'
         matchers:
           - alertname =~ "InfoInhibitor|Watchdog"
     receivers:
-    - name: 'null'
+    - name: 'manoj'
+      email_configs:
+      - to: manojnetha1@gmail.com
     templates:
     - '/etc/alertmanager/config/*.tmpl'
 
